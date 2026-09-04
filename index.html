@@ -809,7 +809,253 @@
 </section>
 
 
+<section class="apl-pc-section">
+  <div class="apl-pc-container">
 
+    <p class="apl-pc-eyebrow">OUR CLIENTS</p>
+    <h2 class="apl-pc-heading">Our Prestigious Clients</h2>
+    <div class="apl-pc-underline"><span class="apl-pc-underline-dark"></span><span class="apl-pc-underline-light"></span></div>
+    <p class="apl-pc-subtitle">Trusted by leading names across infrastructure &amp; construction industries</p>
+
+    <div class="apl-pc-slider" id="apl-pc-slider">
+      <div class="apl-pc-track" id="apl-pc-track">
+        <!-- ONE card per logo — add/remove/replace freely, each slides in individually.
+             Do NOT manually duplicate these; the script clones them for the loop. -->
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=BGR" alt="BGR"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=Gammon" alt="Gammon"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=Dilip+Buildcon" alt="Dilip Buildcon"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=MEIL" alt="MEIL"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=BSCPL" alt="BSCPL"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=Madhucon" alt="Madhucon"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=Client+7" alt="Client 7"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=Client+8" alt="Client 8"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=Client+9" alt="Client 9"></div>
+        <div class="apl-pc-logo-card"><img src="https://via.placeholder.com/160x60?text=Client+10" alt="Client 10"></div>
+      </div>
+    </div>
+
+    <div class="apl-pc-dots" id="apl-pc-dots"></div>
+
+  </div>
+</section>
+
+<style>
+  /* ---------- Our Prestigious Clients Section ---------- */
+  .apl-pc-section{
+    backgsround:#f6f8fb;
+    padding:80px 20px 90px;
+    text-align:center;
+  }
+  .apl-pc-container{
+    max-width:1200px;
+    margin:0 auto;
+  }
+
+  .apl-pc-eyebrow{
+    margin:0 0 10px;
+    font-family:'Poppins', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:2.5px;
+    color:#0d3b70;
+  }
+
+  .apl-pc-heading{
+    margin:0;
+    font-family:'Playfair Display', serif;
+    font-weight:800;
+    font-size:38px;
+    line-height:1.25;
+    color:#0d3b70;
+  }
+
+  .apl-pc-underline{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
+    margin:14px 0 18px;
+  }
+  .apl-pc-underline-dark{
+    display:inline-block;
+    width:38px;
+    height:3px;
+    background:#0d3b70;
+  }
+  .apl-pc-underline-light{
+    display:inline-block;
+    width:14px;
+    height:3px;
+    background:#9db6d4;
+  }
+
+  .apl-pc-subtitle{
+    margin:0 0 50px;
+    font-family:'Poppins', sans-serif;
+    font-size:15px;
+    color:#6b7788;
+  }
+
+  /* Slider — fixed viewport, track shifts by ONE card width at a time, loops forever */
+  .apl-pc-slider{
+    overflow:hidden;
+    width:100%;
+    touch-action:pan-y;
+    padding: 2rem 0rem;
+  }
+  .apl-pc-track{
+    display:flex;
+    gap:22px;
+    transition:transform .6s ease-in-out;
+    will-change:transform;
+  }
+
+  .apl-pc-logo-card{
+    flex:0 0 auto;
+    width:180px;                      /* desktop card width; overridden per breakpoint below */
+    background:#ffffff;
+    border-top:3px solid #0d3b70;
+    border-radius:8px;
+    box-shadow:0 4px 16px rgba(13,59,112,0.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px 18px;
+    min-height:100px;
+    box-sizing:border-box;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .apl-pc-logo-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 26px rgba(13,59,112,0.16);
+  }
+  .apl-pc-logo-card img{
+    max-width:100%;
+    max-height:52px;
+    object-fit:contain;
+    filter:grayscale(10%);
+  }
+
+  /* Dots — one per (original) logo card */
+  .apl-pc-dots{
+    display:flex;
+    justify-content:center;
+    gap:9px;
+    margin-top:38px;
+    flex-wrap:wrap;
+  }
+  .apl-pc-dot{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    border:2px solid #c8a45c;
+    background:transparent;
+    cursor:pointer;
+    padding:0;
+    transition:background .3s ease;
+  }
+  .apl-pc-dot.active{
+    background:#c8a45c;
+  }
+
+  /* ---------- Mobile responsiveness ---------- */
+  @media (max-width:991px){
+    .apl-pc-section{padding:60px 16px 70px;}
+    .apl-pc-heading{font-size:30px;}
+    .apl-pc-logo-card{width:150px; min-height:90px; padding:18px 14px;}
+  }
+  @media (max-width:600px){
+    .apl-pc-heading{font-size:24px;}
+    .apl-pc-subtitle{font-size:13px; margin-bottom:36px;}
+    .apl-pc-track{gap:14px;}
+    /* show ~1.6 cards at a time on small phones so the "next" one peeks in */
+    .apl-pc-logo-card{width:62%; min-height:76px; padding:16px 12px;}
+  }
+  @media (max-width:380px){
+    .apl-pc-logo-card{width:72%;}
+  }
+</style>
+
+<script>
+  (function(){
+    var track    = document.getElementById('apl-pc-track');
+    var dotsWrap = document.getElementById('apl-pc-dots');
+    var originals = Array.prototype.slice.call(track.children);
+    var total = originals.length;
+
+    // Clone the full set once and append, so the loop has a real
+    // "next" card to slide to after the last original card —
+    // this is what makes the first card reappear seamlessly.
+    originals.forEach(function(card){
+      track.appendChild(card.cloneNode(true));
+    });
+    var allCards = Array.prototype.slice.call(track.children);
+
+    // dots only represent the ORIGINAL cards
+    originals.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.className = 'apl-pc-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', function(){
+        goTo(i, true);
+        resetTimer();
+      });
+      dotsWrap.appendChild(dot);
+    });
+    var dots = dotsWrap.querySelectorAll('.apl-pc-dot');
+
+    var current = 0;   // can grow past `total`; real position is current % total
+    var timer;
+
+    function cardStep(){
+      var style = getComputedStyle(track);
+      var gap = parseFloat(style.gap) || 0;
+      return allCards[0].getBoundingClientRect().width + gap;
+    }
+
+    function setTransform(withTransition){
+      track.style.transition = withTransition ? 'transform .6s ease-in-out' : 'none';
+      track.style.transform = 'translateX(-' + (current * cardStep()) + 'px)';
+    }
+
+    function updateDots(){
+      var realIndex = current % total;
+      dots.forEach(function(d, i){ d.classList.toggle('active', i === realIndex); });
+    }
+
+    function goTo(index /*, isDotClick */){
+      current = index;
+      setTransform(true);
+      updateDots();
+    }
+
+    function next(){
+      current += 1;
+      setTransform(true);
+      updateDots();
+
+      // once we've slid past the last ORIGINAL card (into the cloned
+      // set), silently snap back to the matching real position with
+      // no transition — visually identical, so it looks infinite.
+      if (current === total){
+        window.setTimeout(function(){
+          current = 0;
+          setTransform(false);
+        }, 620); // slightly after the .6s transition finishes
+      }
+    }
+
+    function resetTimer(){
+      clearInterval(timer);
+      timer = setInterval(next, 2500);
+    }
+
+    window.addEventListener('resize', function(){ setTransform(false); });
+
+    setTransform(false);
+    updateDots();
+    resetTimer();
+  })();
+</script>
 
 
 <!-- WHY CHOOSE US -->
